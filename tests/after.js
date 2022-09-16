@@ -3,7 +3,7 @@
 describe('After Hooks & Resend', function () {
   var wsClient
   before(function (done) {
-    wsClient = new WebSocket('wss://echo.websocket.org')
+    wsClient = new WebSocket('wss://ws.postman-echo.com/raw')
     wsClient.onopen = function () {
       done()
     }

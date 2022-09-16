@@ -5,11 +5,11 @@ describe('Simple tests using the WebSocket object', function() {
   describe('Modify Url', function() {
     it('Modify the url', function(done) {
         wsHook.modifyUrl = function(url) {
-          return 'wss://echo.websocket.org';
+          return 'wss://ws.postman-echo.com/raw';
         }
         wsClient = new WebSocket('wss://echo2.websocket.org')
         wsClient.onopen = function() {
-          expect(wsClient.url).to.equal('wss://echo.websocket.org/');
+          expect(wsClient.url).to.equal('wss://ws.postman-echo.com/raw');
           done();
         }
     })
