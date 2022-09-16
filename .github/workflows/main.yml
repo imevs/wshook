@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Copy wsHook to test folder
+        run: cp wsHook.js tests
+
       # Runs a single command using the runners shell
       - name: Deploy to GitHub Pages
         if: success()
